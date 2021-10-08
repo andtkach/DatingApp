@@ -1,0 +1,8 @@
+Run PG database in Docker
+docker run --name postgresql -p 5432:5432 -e POSTGRESQL_USERNAME=appuser -e POSTGRESQL_PASSWORD=secret -e POSTGRESQL_DATABASE=datingapp bitnami/postgresql:latest
+
+Create new migation from command line (install dotnet-ef cli from nuget.org)
+dotnet ef migrations add NewEntity -o Data/Migrations
+
+Run migrations
+dotnet ef database update
